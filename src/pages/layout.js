@@ -1,7 +1,7 @@
 import "./styles/globals.css";
 import 'latex.css/style.min.css';
 import styles from "./styles/home.module.css";
-import Link from 'next/Link.js';
+import Link from 'next/link';
 
 export default function RootLayout({ children }) {
   return (
