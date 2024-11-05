@@ -1,0 +1,139 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: flex;
+  min-height: 50svh;
+  max-width: min(100svw, 1024px);
+  margin: 0  auto;
+}
+
+.header, .footer {
+  display: flex;
+  max-width: min(100svw, 1024px);
+  width: 100%;
+  margin: 0  auto;
+  padding-left: 232px;
+  gap: 24px;
+  position: relative;
+}
+
+.header {
+  padding-left: 0;
+}
+
+.sitename {
+  width: 220px;
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.sidebar, .main {
+  padding: 12px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.sidebar, .blogsidebar {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  padding-right: 24px;
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.blogsidebar {
+  align-items: flex-start;
+}
+
+.sidebar p {
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.photo {
+  filter: grayscale(0.8) contrast(2);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+
+  .main ol {
+    text-align: center;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctas a {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  a.secondary {
+    min-width: auto;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+}
