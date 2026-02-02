@@ -1,6 +1,6 @@
 # Alakananda Patra
 
-## Publications
+## Selected Publications
 
 **Novel Self‐Assembling Supramolecular Phenanthro [9, 10‐a] phenazine Discotic Liquid Crystals: 
 Synthesis, Characterization and Charge Transport Studies.**  
